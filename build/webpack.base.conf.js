@@ -33,8 +33,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    alias: {
-      '@': resolve('src'),
+    // 定义一些全局的路径
+    alias: {          
+      '@': resolve('src')
     }
   },
   module: {

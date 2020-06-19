@@ -32,6 +32,7 @@ module.exports = {
     'semi': 'off',
     'space-in-parens': 'off',
     'indent': 'off',
-    'key-spacing': 'off'
+    'key-spacing': 'off',
+    'https://eslint.org/docs/rules/quotes': 'off'
   }
 }
