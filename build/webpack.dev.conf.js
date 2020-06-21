@@ -10,6 +10,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+// 【L14-18】： 启动后台数据模拟
+const express = require('express')
+const app = express()//请求server
+// const axios = require('axios')
+const apiRoutes = express.Router()
+app.use('/api', apiRoutes)
+
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -42,6 +50,27 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    before(app) {
+      app.get('/api/getDatas', function(req, res) {
+        // const url = 'https://wq.jd.com/bases/searchpromptwords/searchpromptwords'
+        // console.log('真实的url: ', url);
+        res.json({
+          errCode: 0
+        })
+        // axios.get(url, {
+        //   headers: {
+        //     referer: 'https://sharryling.com'
+        //   },
+        //   params: req.query
+        // }).then(response => {
+        //   console.log('返回值时：', response)
+        //   res.json(response.data)
+      
+        // }).catch(e => {
+        //   console.log('err:', e)
+        // })
+      })//通过路由请求数据
     }
   },
   plugins: [

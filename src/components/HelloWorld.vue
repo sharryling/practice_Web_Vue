@@ -9,7 +9,7 @@
 <script>
 // import { ERR_OK } from "../api/config.js";
 import Slider from './Slider.vue';
-
+import { requestBefore } from '../api/jd.m.js'
 export default {
   name: 'HelloWorld',
   components: {
@@ -20,6 +20,14 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     };
+  },
+  mounted() {
+    this._testDevServer()
+  },
+  methods: {
+    _testDevServer() {
+      requestBefore()
+    }
   }
 };
 </script>
