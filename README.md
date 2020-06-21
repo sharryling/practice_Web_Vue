@@ -46,3 +46,14 @@ npm run lint-fix // 自动修正   **但是对vue没起作用?
 ## 启动后台数据模拟
 在webpack.dev.conf.js中【L14-18、L54-74】： 启动后台数据模拟
                        
+
+## better-scroll：移动端滚动组件
+use: base/scroll
+- 需要有内容才
+
+
+
+
+# mentions:
+1.  setTimeout(() => { xxxx  }, 20)  为什么要20ms
+    为了保证dom成功渲染，通常会在mounted函数中加个延时函数，由于浏览器刷新的时间一般为17ms一次，因此把setTimeout的值设置为17ms之后，即20ms，例如在需要获取内容宽高的场景。

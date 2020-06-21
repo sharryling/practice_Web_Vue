@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-// 【L14-18】： 启动后台数据模拟
+// 【L14-18 L54-74】： 启动后台数据模拟
 const express = require('express')
 const app = express()//请求server
 // const axios = require('axios')
