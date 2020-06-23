@@ -29,6 +29,6 @@ export function requestBefore() {
   return axios.get(url, {
     params: data
   }).then(res => {
-    return Promise.resolve(res.data)
+    return Promise.resolve(res.data) // 相当于return res 
   })
 }

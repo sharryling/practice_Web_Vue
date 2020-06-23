@@ -23,6 +23,7 @@ import Singer from './Singer.vue'
 import Slider from './Slider.vue';
 import { requestBefore } from '../api/jd.m.js';
 import { mapState, mapGetters } from 'vuex';
+import { getDatas } from '../api/index.js'
 export default {
   name: 'HelloWorld',
   components: {
@@ -45,11 +46,18 @@ export default {
     ...mapGetters(['tokenTitle'])
   },
   mounted() {
-    this._testDevServer();
+    this._testDevServer()
+    getDatas({
+      info: 'test'
+    }).then(data => {
+      console.log('getDatas: ', data);
+    })
   },
   methods: {
     _testDevServer() {
-      requestBefore();
+      requestBefore().then(er => {
+        console.log('requestBefore: ', er);
+      })
     },
     addSinger() {
       this.ADDSinger();

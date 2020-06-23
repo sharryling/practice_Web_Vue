@@ -44,7 +44,7 @@ npm run lint-fix // 自动修正   **但是对vue没起作用?
 
 
 ## 启动后台数据模拟
-在webpack.dev.conf.js中【L14-18、L54-74】： 启动后台数据模拟
+在webpack.dev.conf.js中【L47-67】： 启动后台数据模拟
                        
 
 ## better-scroll：移动端滚动组件
@@ -59,6 +59,11 @@ use: base/scroll
 - modules
 - mapXXX
 + eg: HelloWold进行了两种方法的显示（state,getter），Singer.vue进行了两种方式的方法(mutations, actions)
+
+## 封装api
+### jsonp
+### axios
++ eg: api/helper.js里面的get方法，api/index.js中对get(url)进行了引用
 
 # mentions:
 1.  setTimeout(() => { xxxx  }, 20)  为什么要20ms

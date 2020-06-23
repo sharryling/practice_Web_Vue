@@ -10,14 +10,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-// 【L14-18 L54-74】： 启动后台数据模拟
-const express = require('express')
-const app = express()//请求server
-// const axios = require('axios')
-const apiRoutes = express.Router()
-app.use('/api', apiRoutes)
-
-
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -55,8 +47,19 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       app.get('/api/getDatas', function(req, res) {
         // const url = 'https://wq.jd.com/bases/searchpromptwords/searchpromptwords'
         // console.log('真实的url: ', url);
+        console.log('模拟后台')
         res.json({
-          errCode: 0
+          errCode: 0,
+          data: {
+            id: 13,
+            list: [{
+              id:32,
+              name: '23423'
+            },{
+              id:234,
+              name: 'asd多少分'
+            }]
+          }
         })
         // axios.get(url, {
         //   headers: {
