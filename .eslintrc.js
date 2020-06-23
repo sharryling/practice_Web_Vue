@@ -33,6 +33,7 @@ module.exports = {
     'space-in-parens': 'off',
     'indent': 'off',
     'key-spacing': 'off',
-    'https://eslint.org/docs/rules/quotes': 'off'
+    'https://eslint.org/docs/rules/quotes': 'off',
+    'eol-last': 'off'
   }
 }

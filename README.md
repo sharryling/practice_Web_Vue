@@ -51,8 +51,14 @@ npm run lint-fix // 自动修正   **但是对vue没起作用?
 use: base/scroll
 - 需要有内容才
 
-
-
+## Vuex的使用
+- state
+- getters
+- mutations
+- actions
+- modules
+- mapXXX
++ eg: HelloWold进行了两种方法的显示（state,getter），Singer.vue进行了两种方式的方法(mutations, actions)
 
 # mentions:
 1.  setTimeout(() => { xxxx  }, 20)  为什么要20ms
