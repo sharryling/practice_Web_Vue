@@ -34,6 +34,7 @@ module.exports = {
     'indent': 'off',
     'key-spacing': 'off',
     'https://eslint.org/docs/rules/quotes': 'off',
-    'eol-last': 'off'
+    'eol-last': 'off',
+    'no-extra-parens': 'off'
   }
 }

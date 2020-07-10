@@ -7,7 +7,9 @@
 
 <script>
 import { mapMutations, mapActions } from 'vuex'
+import {playListMixin} from '../common/js/mixin.js'
 export default {
+  mixins: [playListMixin], // 这里引用
   methods: {
     addSinger() {
       this.$store.commit('singer/ADDSinger');

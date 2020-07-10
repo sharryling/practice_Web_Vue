@@ -19,11 +19,19 @@
 
 <script>
 // import { ERR_OK } from "../api/config.js";
-import Singer from './Singer.vue'
+// import { Singer } from './Singer.vue'
+
+
 import Slider from './Slider.vue';
 import { requestBefore } from '../api/jd.m.js';
 import { mapState, mapGetters } from 'vuex';
-import { getDatas } from '../api/index.js'
+import { getDatas } from '../api/index.js';
+
+const Singer = ( ( resolve ) => {
+  import('./Singer.vue').then((recommend) => {
+    resolve(recommend)
+  })
+})
 export default {
   name: 'HelloWorld',
   components: {
@@ -62,7 +70,6 @@ export default {
     addSinger() {
       this.ADDSinger();
     }
-
   }
 };
 </script>
