@@ -31,7 +31,7 @@ src/common/js/jsonp.js 封装了统一的jonsp方法
 
 ## 轮播图
 使用了https://github.com/surmon-china/vue-awesome-swiper
-
++ eg: components/Slider.vue
 
 ## 目录规范
 公共参数 可放在： api.config.js
